@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\drawable\\notification_tile_bg.xml"
+    }
+]

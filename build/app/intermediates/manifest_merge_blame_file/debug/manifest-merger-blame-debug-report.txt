@@ -1,0 +1,136 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pet_user_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Aymen\Desktop\petzy\android\app\src\debug\AndroidManifest.xml:20:5-66
+11-->C:\Users\Aymen\Desktop\petzy\android\app\src\debug\AndroidManifest.xml:20:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:4:4-64
+12-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:4:21-61
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.pet_user_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.pet_user_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19    <!--
+20 Flutter needs it to communicate with the running application
+21         to allow setting breakpoints, to provide hot reload, etc.
+22    -->
+23    <application
+23-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:6:4-45:19
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.9.0] C:\Users\Aymen\.gradle\caches\transforms-3\926ee346fe49f02c8334a5b88fa3ff31\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:8:9-43
+27        android:label="petzy" >
+27-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:7:9-30
+28        <activity
+28-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:11:9-39:20
+29            android:name="com.example.pet_user_app.MainActivity"
+29-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:12:13-41
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:15:13-163
+31            android:exported="true"
+31-->C:\Users\Aymen\Desktop\petzy\android\app\src\debug\AndroidManifest.xml:13:13-36
+32            android:hardwareAccelerated="true"
+32-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:16:13-47
+33            android:launchMode="singleTop"
+33-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:13:13-43
+34            android:theme="@style/LaunchTheme"
+34-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:14:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:17:13-55
+36            <intent-filter>
+36-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:35:13-38:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:36:17-68
+37-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:36:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:37:17-76
+39-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:37:27-74
+40            </intent-filter>
+41            <!--
+42             Specifies an Android theme to apply to this Activity as soon as
+43                 the Android process has started. This theme is visible to the user
+44                 while the Flutter UI initializes. After that, this theme continues
+45                 to determine the Window background behind the Flutter UI.
+46            -->
+47            <meta-data
+47-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:22:13-25:17
+48                android:name="io.flutter.embedding.android.NormalTheme"
+48-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:23:15-70
+49                android:resource="@style/NormalTheme" />
+49-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:24:15-52
+50            <!--
+51 Displays an Android View that continues showing the launch screen
+52                 Drawable until Flutter paints its first frame, then this splash
+53                 screen fades out. A splash screen is useful to avoid any visual
+54                 gap between the end of Android's launch screen and the painting of
+55                 Flutter's first frame.
+56            -->
+57            <meta-data
+57-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:31:13-34:17
+58                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+58-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:32:15-79
+59                android:resource="@drawable/launch_background" />
+59-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:33:15-61
+60        </activity>
+61        <!--
+62         Don't delete the meta-data below.
+63             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+64        -->
+65        <meta-data
+65-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:42:9-44:33
+66            android:name="flutterEmbedding"
+66-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:43:13-44
+67            android:value="2" />
+67-->C:\Users\Aymen\Desktop\petzy\android\app\src\main\AndroidManifest.xml:44:13-30
+68
+69        <provider
+69-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+70            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+70-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+71            android:authorities="com.example.pet_user_app.flutter.image_provider"
+71-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+72            android:exported="false"
+72-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+73            android:grantUriPermissions="true" >
+73-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+74            <meta-data
+74-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+76                android:resource="@xml/flutter_image_picker_file_paths" />
+76-->[:image_picker_android] C:\Users\Aymen\Desktop\petzy\build\image_picker_android\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+77        </provider>
+78
+79        <uses-library
+79-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+80            android:name="androidx.window.extensions"
+80-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+81            android:required="false" />
+81-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+82        <uses-library
+82-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+83            android:name="androidx.window.sidecar"
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\Aymen\.gradle\caches\transforms-3\f70cebe48cb33f4b4f76096991590089\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+85    </application>
+86
+87</manifest>

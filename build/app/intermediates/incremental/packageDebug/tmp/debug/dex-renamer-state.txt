@@ -1,0 +1,4 @@
+#Mon May 08 11:45:12 CET 2023
+base.0=C\:\\Users\\Aymen\\Desktop\\petzy\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

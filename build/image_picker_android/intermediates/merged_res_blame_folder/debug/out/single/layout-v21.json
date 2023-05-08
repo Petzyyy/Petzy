@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aymen\\Desktop\\petzy\\build\\image_picker_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Aymen\\.gradle\\caches\\transforms-3\\926ee346fe49f02c8334a5b88fa3ff31\\transformed\\core-1.9.0\\res\\layout-v21\\notification_template_icon_group.xml"
+    }
+]
