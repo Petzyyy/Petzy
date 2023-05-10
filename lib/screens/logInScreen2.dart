@@ -13,7 +13,6 @@ class LogInScreen2 extends BaseRoute {
 class _LogInScreen2State extends BaseRouteState {
   bool _showPassword = true;
   _LogInScreen2State() : super();
-  
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +68,7 @@ class _LogInScreen2State extends BaseRouteState {
                   padding: EdgeInsets.only(top: 5),
                   child: TextFormField(
                     obscureText: _showPassword,
+
                     // controller: _cForgotEmail,
                     decoration: InputDecoration(
                       suffixIcon: IconButton(
@@ -92,13 +92,12 @@ class _LogInScreen2State extends BaseRouteState {
                     Padding(
                       padding: EdgeInsets.only(top: 8),
                       child: GestureDetector(
-                        onTap: ()  {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(
-                                  builder: (context) => ForgotPasswordScreen(
-                                        a: widget.analytics,
-                                        o: widget.observer,
-                                      )));
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => ForgotPasswordScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
                         },
                         child: Text('Forgot Password',
                             style:

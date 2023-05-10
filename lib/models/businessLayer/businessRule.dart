@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
@@ -7,10 +8,10 @@ class BusinessRule {
   APIHelper dbHelper;
 
   BusinessRule(APIHelper _dbHelper) {
-    
     dbHelper = _dbHelper;
   }
 
+  
   Future<File> openCamera() async {
     try {
       // PermissionStatus permissionStatus = await Permission.camera.status;
@@ -36,7 +37,6 @@ class BusinessRule {
     }
     return null;
   }
-
   Future<File> selectImageFromGallery() async {
     try {
       // PermissionStatus permissionStatus = await Permission.photos.status;
@@ -56,9 +56,9 @@ class BusinessRule {
         return imageFile;
       }
     } catch (e) {
-      print("Exception - businessRule.dart - selectImageFromGallery()" +
-          e.toString());
+      print("Exception - businessRule.dart - selectImageFromGallery()" + e.toString());
     }
     return null;
   }
+  
 }

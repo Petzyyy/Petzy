@@ -1,11 +1,18 @@
+import 'dart:convert';
+
+import 'package:fancy_snackbar/fancy_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
 import 'package:pet_user_app/screens/logInScreen2.dart';
 import 'package:pet_user_app/screens/otpVerificationScreen.dart';
 import 'package:pet_user_app/screens/signUpScreen.dart';
+import 'package:http/http.dart'as http;
 
+import '../Utils/Api.dart';
+import '../widgets/bottomNavigationBarWidget.dart';
+var email , password, response;
 class LogInScreen1 extends BaseRoute {
-  // LogInScreen1() : super();
+  // LogInScreen1() : super();F
   LogInScreen1({a, o}) : super(a: a, o: o, r: 'LogInScreen1');
   @override
   _LogInScreen1State createState() => new _LogInScreen1State();
@@ -13,6 +20,9 @@ class LogInScreen1 extends BaseRoute {
 
 class _LogInScreen1State extends BaseRouteState {
   _LogInScreen1State() : super();
+
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +47,32 @@ class _LogInScreen1State extends BaseRouteState {
                   Padding(
                     padding: EdgeInsets.only(top: 80),
                     child: TextFormField(
+                      controller: emailcontroller,
                       // controller: _cForgotEmail,
                       decoration: InputDecoration(
-                        hintText: 'Enter address or mobile number',
+                        hintText: 'Enter your email',
                         // prefixIcon: Icon(Icons.mail),
                         contentPadding: EdgeInsets.only(top: 5, left: 10),
                       ),
+                      onChanged: (value){
+                        email=value;
+                      },
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: TextFormField(
+                      controller: passwordcontroller,
+                      // controller: _cForgotEmail,
+                      decoration: InputDecoration(
+                        hintText: 'Enter your password',
+                        // prefixIcon: Icon(Icons.mail),
+                        contentPadding: EdgeInsets.only(top: 5, left: 10),
+                      ),
+                      onChanged: (value){
+                        password=value;
+                      },
                     ),
                   ),
                   // Container(
@@ -126,13 +156,51 @@ class _LogInScreen1State extends BaseRouteState {
                 width: MediaQuery.of(context).size.width,
                 child: TextButton(
                     // style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColor)),
-                    onPressed: () {
-                      print('Hello');
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => LogInScreen2(
-                                a: widget.analytics,
-                                o: widget.observer,
-                              )));
+                    onPressed: () async  {
+                      response=await http.post(
+                          Uri.parse(Api.urlLogin),
+                          headers: <String, String>{
+                          'Content-Type':
+                          'application/json; charset=UTF-8',
+                          },
+                          body: json.encode({
+
+                          "email":email,
+
+                          "password":password
+
+                          }),
+                      );
+                      print(response.body);
+
+                      if (response.body=="User not found"){
+                        FancySnackbar.showSnackbar(
+                          context,
+                          snackBarType: FancySnackBarType.warning,
+                          title: "Warning",
+                          message: "User not found!!",
+                          duration: 2,
+                          onCloseEvent: () {},
+                        );
+                      }
+                      else if (response.body=="Invalid password"){
+                        FancySnackbar.showSnackbar(
+                          context,
+                          snackBarType: FancySnackBarType.warning,
+                          title: "Warning",
+                          message: "Invalid password!!",
+                          duration: 2,
+                          onCloseEvent: () {},
+                        );
+                      }
+                      else{
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => BottomNavigationWidget(
+                              a: widget.analytics,
+                              o: widget.observer,
+                            )));
+                      }
+
                     },
                     child: Text(
                       "Continue",

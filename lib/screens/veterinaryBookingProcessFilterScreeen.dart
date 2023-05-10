@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
-import 'package:pet_user_app/screens/homeScreen.dart';
-import 'package:pet_user_app/screens/logInScreen2.dart';
-import 'package:pet_user_app/screens/veterinaryScreen.dart';
 
 class VeterinaryBookingProccessFilterScreen extends BaseRoute {
   VeterinaryBookingProccessFilterScreen({a, o})
@@ -25,14 +22,14 @@ class _VeterinaryBookingProccessFilterScreenState extends BaseRouteState {
   bool videocallSelected = false;
 
   bool catSelectd = false;
-  bool mealSelectd = false;
-  bool groomingSelected = false;
-  bool careSelected = false;
-  bool outdoorSelected = false;
+  // bool mealSelectd = false;
+  // bool groomingSelected = false;
+  // bool careSelected = false;
+  // bool outdoorSelected = false;
   int startRangeVal = 50;
   int endRangeVal = 150;
   int sliderValInint;
-  RangeValues sliderVal5 = const RangeValues(0, 30);
+  RangeValues sliderVal5 = const RangeValues(0, 10);
 
   _VeterinaryBookingProccessFilterScreenState() : super();
 
@@ -93,146 +90,132 @@ class _VeterinaryBookingProccessFilterScreenState extends BaseRouteState {
       ),
     };
 
-    final Map<int, Widget> _widgetsFaciltites = <int, Widget>{
-      0: Padding(
-        padding: const EdgeInsets.only(right: 5),
-        child: Column(
-          children: [
-            Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0)),
-              child: CircleAvatar(
-                backgroundColor:
-                    mealSelectd ? Theme.of(context).primaryColor : Colors.white,
-                child: Icon(FontAwesomeIcons.dog,
-                    color: dogSelected ? Colors.white : Color(0xFF8F8F8F)),
-                radius: 25,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 0),
-              child: Text(
-                'Meals',
-                style: Theme.of(context).primaryTextTheme.subtitle2,
-              ),
-            )
-          ],
-        ),
-      ),
-      1: Padding(
-        padding: const EdgeInsets.only(left: 0),
-        child: Column(
-          children: [
-            Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0)),
-              child: CircleAvatar(
-                backgroundColor:
-                    catSelectd ? Theme.of(context).primaryColor : Colors.white,
-                child: Icon(FontAwesomeIcons.cat,
-                    color: groomingSelected ? Colors.white : Color(0xFF8F8F8F)),
-                radius: 25,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 0),
-              child: Text(
-                'Grooming',
-                style: Theme.of(context).primaryTextTheme.subtitle2,
-              ),
-            )
-          ],
-        ),
-      ),
-      2: Padding(
-        padding: const EdgeInsets.only(left: 0),
-        child: Column(
-          children: [
-            Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0)),
-              child: CircleAvatar(
-                backgroundColor: outdoorSelected
-                    ? Theme.of(context).primaryColor
-                    : Colors.white,
-                child: Icon(FontAwesomeIcons.cat,
-                    color: catSelectd ? Colors.white : Color(0xFF8F8F8F)),
-                radius: 25,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 0),
-              child: Text(
-                'Outdoor',
-                style: Theme.of(context).primaryTextTheme.subtitle2,
-              ),
-            )
-          ],
-        ),
-      ),
-      3: Padding(
-        padding: const EdgeInsets.only(left: 0),
-        child: Column(
-          children: [
-            Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0)),
-              child: CircleAvatar(
-                backgroundColor:
-                    catSelectd ? Theme.of(context).primaryColor : Colors.white,
-                child: Icon(FontAwesomeIcons.cat,
-                    color: careSelected ? Colors.white : Color(0xFF8F8F8F)),
-                radius: 25,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 0),
-              child: Text(
-                'Care',
-                style: Theme.of(context).primaryTextTheme.subtitle2,
-              ),
-            )
-          ],
-        ),
-      ),
-    };
+    // final Map<int, Widget> _widgetsFaciltites = <int, Widget>{
+    //   0: Padding(
+    //     padding: const EdgeInsets.only(right: 5),
+    //     child: Column(
+    //       children: [
+    //         Card(
+    //           elevation: 3,
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(50.0)),
+    //           child: CircleAvatar(
+    //             backgroundColor:
+    //                 mealSelectd ? Theme.of(context).primaryColor : Colors.white,
+    //             child: Icon(FontAwesomeIcons.dog,
+    //                 color: dogSelected ? Colors.white : Color(0xFF8F8F8F)),
+    //             radius: 25,
+    //           ),
+    //         ),
+    //         Padding(
+    //           padding: EdgeInsets.only(top: 0),
+    //           child: Text(
+    //             'Meals',
+    //             style: Theme.of(context).primaryTextTheme.subtitle2,
+    //           ),
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    //   1: Padding(
+    //     padding: const EdgeInsets.only(left: 0),
+    //     child: Column(
+    //       children: [
+    //         Card(
+    //           elevation: 3,
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(50.0)),
+    //           child: CircleAvatar(
+    //             backgroundColor:
+    //                 catSelectd ? Theme.of(context).primaryColor : Colors.white,
+    //             child: Icon(FontAwesomeIcons.cat,
+    //                 color: groomingSelected ? Colors.white : Color(0xFF8F8F8F)),
+    //             radius: 25,
+    //           ),
+    //         ),
+    //         Padding(
+    //           padding: EdgeInsets.only(top: 0),
+    //           child: Text(
+    //             'Grooming',
+    //             style: Theme.of(context).primaryTextTheme.subtitle2,
+    //           ),
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    //   2: Padding(
+    //     padding: const EdgeInsets.only(left: 0),
+    //     child: Column(
+    //       children: [
+    //         Card(
+    //           elevation: 3,
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(50.0)),
+    //           child: CircleAvatar(
+    //             backgroundColor: outdoorSelected
+    //                 ? Theme.of(context).primaryColor
+    //                 : Colors.white,
+    //             child: Icon(FontAwesomeIcons.cat,
+    //                 color: catSelectd ? Colors.white : Color(0xFF8F8F8F)),
+    //             radius: 25,
+    //           ),
+    //         ),
+    //         Padding(
+    //           padding: EdgeInsets.only(top: 0),
+    //           child: Text(
+    //             'Outdoor',
+    //             style: Theme.of(context).primaryTextTheme.subtitle2,
+    //           ),
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    //   3: Padding(
+    //     padding: const EdgeInsets.only(left: 0),
+    //     child: Column(
+    //       children: [
+    //         Card(
+    //           elevation: 3,
+    //           shape: RoundedRectangleBorder(
+    //               borderRadius: BorderRadius.circular(50.0)),
+    //           child: CircleAvatar(
+    //             backgroundColor:
+    //                 catSelectd ? Theme.of(context).primaryColor : Colors.white,
+    //             child: Icon(FontAwesomeIcons.cat,
+    //                 color: careSelected ? Colors.white : Color(0xFF8F8F8F)),
+    //             radius: 25,
+    //           ),
+    //         ),
+    //         Padding(
+    //           padding: EdgeInsets.only(top: 0),
+    //           child: Text(
+    //             'Care',
+    //             style: Theme.of(context).primaryTextTheme.subtitle2,
+    //           ),
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    // };
 
     return Scaffold(
         bottomNavigationBar: Container(
-          height: 45,
-          padding: EdgeInsets.only(left: 15, right: 15),
-          width: MediaQuery.of(context).size.width,
-          child: ElevatedButton(
-            onPressed: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => VeterinaryScreen(
-                    a: widget.analytics,
-                    o: widget.observer,
-                  ),
-                ),
-              );
-              // Navigate to the HomeScreen
-              Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(
-                  builder: (context) => HomeScreen(
-                    a: widget.analytics,
-                    o: widget.observer,
-                  ),
-                ),
-                (Route<dynamic> route) => false,
-              );
-            },
-            child: Text(
-              "Show Results",
-              style: TextStyle(fontSize: 16),
-            ),
-          ),
-        ),
+            // color: Colors.red,
+            height: 45,
+            padding: EdgeInsets.only(left: 15, right: 15),
+            width: MediaQuery.of(context).size.width,
+            child: TextButton(
+                onPressed: () {
+                  print('Hello');
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => LogInScreen2(
+                  //           a: widget.analytics,
+                  //           o: widget.observer,
+                  //         )));
+                },
+                child: Text(
+                  "Show Results",
+                ))),
         appBar: AppBar(
           actions: [
             Padding(
@@ -261,558 +244,547 @@ class _VeterinaryBookingProccessFilterScreenState extends BaseRouteState {
           ),
         ),
         body: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SingleChildScrollView(
-                child: Column(children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(),
-                      child: Text(
-                        'Type of Pet',
-                        style: Theme.of(context).primaryTextTheme.bodyText1,
-                      ),
-                    ),
-                    Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
                         padding: EdgeInsets.only(),
-                        child: Container(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: CupertinoSegmentedControl(
-                            pressedColor: Colors.transparent,
-                            selectedColor: Colors.transparent,
-                            borderColor: Colors.transparent,
-                            onValueChanged: (val) {
-                              if (val == 0) {
-                                setState(() {
-                                  dogSelected = true;
-                                  catSelectd = false;
-                                });
-                              } else {
-                                setState(() {
-                                  catSelectd = true;
-                                  dogSelected = false;
-                                });
-                              }
-                            },
-                            children: _widgetsOfDogAndCat,
-                          ),
-                        ))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(),
-                      child: Text(
-                        'Number of pets',
-                        style: Theme.of(context).primaryTextTheme.bodyText1,
+                        child: Text(
+                          'Type of Pet',
+                          style: Theme.of(context).primaryTextTheme.bodyText1,
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 5),
-                            child: GestureDetector(
-                              onTap: () {
-                                noOfPets--;
-                                setState(() {});
+                      Padding(
+                          padding: EdgeInsets.only(),
+                          child: Container(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: CupertinoSegmentedControl(
+                              pressedColor: Colors.transparent,
+                              selectedColor: Colors.transparent,
+                              borderColor: Colors.transparent,
+                              onValueChanged: (val) {
+                                if (val == 0) {
+                                  setState(() {
+                                    dogSelected = true;
+                                    catSelectd = false;
+                                  });
+                                } else {
+                                  setState(() {
+                                    catSelectd = true;
+                                    dogSelected = false;
+                                  });
+                                }
                               },
-                              child: Icon(
-                                FontAwesomeIcons.minus,
-                                size: 10,
-                                color: Theme.of(context)
-                                    .primaryTextTheme
-                                    .subtitle2
-                                    .color,
+                              children: _widgetsOfDogAndCat,
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(),
+                        child: Text(
+                          'Number of pets',
+                          style: Theme.of(context).primaryTextTheme.bodyText1,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 5),
+                              child: GestureDetector(
+                                onTap: () {
+                                  noOfPets--;
+                                  setState(() {});
+                                },
+                                child: Icon(
+                                  FontAwesomeIcons.minus,
+                                  size: 10,
+                                  color: Theme.of(context)
+                                      .primaryTextTheme
+                                      .subtitle2
+                                      .color,
+                                ),
                               ),
                             ),
-                          ),
-                          Card(
-                            elevation: 3,
-                            child: Container(
-                              height: 25,
-                              width: 20,
-                              // color: Colors.red,
-                              child: Center(
-                                  child: Text(
-                                '$noOfPets',
-                                style: Theme.of(context).textTheme.subtitle1,
-                              )),
+                            Card(
+                              elevation: 3,
+                              child: Container(
+                                height: 25,
+                                width: 20,
+                                // color: Colors.red,
+                                child: Center(
+                                    child: Text(
+                                  '$noOfPets',
+                                  style: Theme.of(context).textTheme.subtitle1,
+                                )),
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 5),
-                            child: GestureDetector(
-                              onTap: () {
-                                noOfPets++;
-                                setState(() {});
-                              },
+                            Padding(
+                              padding: const EdgeInsets.only(right: 5),
+                              child: GestureDetector(
+                                onTap: () {
+                                  noOfPets++;
+                                  setState(() {});
+                                },
+                                child: Icon(
+                                  Icons.add,
+                                  size: 15,
+                                  color: Theme.of(context)
+                                      .primaryTextTheme
+                                      .subtitle2
+                                      .color,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(),
+                        child: Text(
+                          'Date',
+                          style: Theme.of(context).primaryTextTheme.bodyText1,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0),
+                        child: Row(
+                          children: [
+                            Card(
+                              elevation: 3,
+                              child: Container(
+                                  height: 25,
+                                  width: 85,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 3, bottom: 3, left: 5, right: 5),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          '11 Feb 2021',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle1,
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
                               child: Icon(
-                                Icons.add,
+                                Icons.calendar_today,
                                 size: 15,
                                 color: Theme.of(context)
                                     .primaryTextTheme
                                     .subtitle2
                                     .color,
                               ),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(),
-                      child: Text(
-                        'Date',
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Distance',
                         style: Theme.of(context).primaryTextTheme.bodyText1,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0),
-                      child: Row(
-                        children: [
-                          Card(
-                            elevation: 3,
-                            child: Container(
-                                height: 25,
-                                width: 85,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 3, bottom: 3, left: 5, right: 5),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        '11 Feb 2021',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .subtitle1,
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Icon(
-                              Icons.calendar_today,
-                              size: 15,
-                              color: Theme.of(context)
-                                  .primaryTextTheme
-                                  .subtitle2
-                                  .color,
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Distance',
-                      style: Theme.of(context).primaryTextTheme.bodyText1,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0),
-                      child: Card(
-                        elevation: 3,
-                        child: Container(
-                          width: 50,
-                          height: 25,
-                          child: Center(
-                              child: Text('${sliderVal.toInt()} KM',
-                                  style:
-                                      Theme.of(context).textTheme.subtitle1)),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 10),
-                    // color: Colors.red,
-                    height: 20,
-                    width: MediaQuery.of(context).size.width,
-                    child: SliderTheme(
-                      data: SliderTheme.of(context).copyWith(
-                        activeTrackColor: Theme.of(context).primaryColor,
-                        inactiveTrackColor: Color(0xFF8F8F8F),
-                        trackHeight: 2.0,
-                        thumbColor: Theme.of(context).primaryColor,
-                        thumbShape:
-                            RoundSliderThumbShape(enabledThumbRadius: 8.0),
-                        overlayColor: Colors.purple.withAlpha(32),
-                        overlayShape:
-                            RoundSliderOverlayShape(overlayRadius: 14.0),
-                      ),
-                      child: Slider(
-                        // onChangeEnd: ,
-                        min: 0,
-                        max: 30,
-                        value: sliderVal,
-                        onChanged: (value) {
-                          sliderVal = value;
-                          setState(() {});
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 0,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text(
-                            '0 Km',
-                            style: Theme.of(context).primaryTextTheme.subtitle2,
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0),
+                        child: Card(
+                          elevation: 3,
+                          child: Container(
+                            width: 50,
+                            height: 25,
+                            child: Center(
+                                child: Text('${sliderVal.toInt()} KM',
+                                    style:
+                                        Theme.of(context).textTheme.subtitle1)),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Text('30 KM',
-                              style:
-                                  Theme.of(context).primaryTextTheme.subtitle2),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Price Range',
-                      style: Theme.of(context).primaryTextTheme.bodyText1,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 0),
-                      child: Row(
-                        children: [
-                          Card(
-                            elevation: 3,
-                            child: Container(
-                              width: 50,
-                              height: 25,
-                              child: Center(
-                                  child: Text(
-                                'Rs.$startRangeVal',
-                                style: Theme.of(context).textTheme.subtitle1,
-                              )),
-                            ),
-                          ),
-                          Text('to',
-                              style:
-                                  Theme.of(context).primaryTextTheme.subtitle2),
-                          Card(
-                            elevation: 3,
-                            child: Container(
-                              width: 50,
-                              height: 25,
-                              child: Center(
-                                  child: Text('Rs.$endRangeVal',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .subtitle1)),
-                            ),
-                          ),
-                          Text(
-                            '/visit',
-                            style: Theme.of(context).primaryTextTheme.subtitle2,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 10),
-                    // color: Colors.red,
-                    height: 20,
-                    width: MediaQuery.of(context).size.width,
-                    child: SliderTheme(
-                      data: SliderTheme.of(context).copyWith(
-                        activeTrackColor: Theme.of(context).primaryColor,
-                        inactiveTrackColor: Color(0xFF8F8F8F),
-                        trackHeight: 2.0,
-                        thumbColor: Theme.of(context).primaryColor,
-                        thumbShape:
-                            RoundSliderThumbShape(enabledThumbRadius: 8.0),
-                        overlayColor: Colors.purple.withAlpha(32),
-                        overlayShape:
-                            RoundSliderOverlayShape(overlayRadius: 14.0),
-                      ),
-                      child: RangeSlider(
-                        values: sliderVal5,
-                        // onChangeEnd: ,
-                        min: 0,
-                        max: 500,
-                        onChanged: (RangeValues value) {
-                          sliderVal5 = value;
-                          print(value.start);
-                          startRangeVal = value.start.toInt();
-                          endRangeVal = value.end.toInt();
-
-                          setState(() {});
-                        },
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: 0,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text(
-                            'Rs.0',
-                            style: Theme.of(context).primaryTextTheme.subtitle2,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 10),
-                          child: Text('Rs.1000',
-                              style:
-                                  Theme.of(context).primaryTextTheme.subtitle2),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Column(
                   children: [
-                    Text(
-                      'Rating',
-                      style: Theme.of(context).primaryTextTheme.bodyText1,
-                    ),
-                    Row(
-                      children: [
-                        RatingBar.builder(
-                          initialRating: ratingVal,
-                          minRating: 0,
-                          direction: Axis.horizontal,
-                          allowHalfRating: true,
-                          itemCount: 5,
-                          itemSize: 20,
-                          itemPadding: EdgeInsets.symmetric(horizontal: 0),
-                          itemBuilder: (context, _) => Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                          ),
-                          ignoreGestures: false,
-                          updateOnDrag: true,
-                          onRatingUpdate: (rating) {
-                            ratingVal = rating;
+                    Container(
+                      margin: EdgeInsets.only(top: 10),
+                      // color: Colors.red,
+                      height: 20,
+                      width: MediaQuery.of(context).size.width,
+                      child: SliderTheme(
+                        data: SliderTheme.of(context).copyWith(
+                          activeTrackColor: Theme.of(context).primaryColor,
+                          inactiveTrackColor: Color(0xFF8F8F8F),
+                          trackHeight: 2.0,
+                          thumbColor: Theme.of(context).primaryColor,
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 8.0),
+                          overlayColor: Colors.purple.withAlpha(32),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 14.0),
+                        ),
+                        child: Slider(
+                          // onChangeEnd: ,
+                          min: 0,
+                          max: 10,
+                          value: sliderVal,
+                          onChanged: (value) {
+                            sliderVal = value;
                             setState(() {});
                           },
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 7),
-                          child: Text(
-                            '$ratingVal+',
-                            style: Theme.of(context).primaryTextTheme.subtitle2,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 0,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text(
+                              '0 Km',
+                              style:
+                                  Theme.of(context).primaryTextTheme.subtitle2,
+                            ),
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Text('30 KM',
+                                style: Theme.of(context)
+                                    .primaryTextTheme
+                                    .subtitle2),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
-              ),
-              Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 30),
-                  child: Column(children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Type of Appointment',
-                          style: Theme.of(context).primaryTextTheme.bodyText1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Price Range',
+                        style: Theme.of(context).primaryTextTheme.bodyText1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 0),
+                        child: Row(
+                          children: [
+                            Card(
+                              elevation: 3,
+                              child: Container(
+                                width: 50,
+                                height: 25,
+                                child: Center(
+                                    child: Text(
+                                  'Rs.$startRangeVal',
+                                  style: Theme.of(context).textTheme.subtitle1,
+                                )),
+                              ),
+                            ),
+                            Text('to',
+                                style: Theme.of(context)
+                                    .primaryTextTheme
+                                    .subtitle2),
+                            Card(
+                              elevation: 3,
+                              child: Container(
+                                width: 50,
+                                height: 25,
+                                child: Center(
+                                    child: Text('Rs.$endRangeVal',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .subtitle1)),
+                              ),
+                            ),
+                            Text(
+                              '/visit',
+                              style:
+                                  Theme.of(context).primaryTextTheme.subtitle2,
+                            )
+                          ],
                         ),
-                      ],
+                      )
+                    ],
+                  ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 10),
+                      // color: Colors.red,
+                      height: 20,
+                      width: MediaQuery.of(context).size.width,
+                      child: SliderTheme(
+                        data: SliderTheme.of(context).copyWith(
+                          activeTrackColor: Theme.of(context).primaryColor,
+                          inactiveTrackColor: Color(0xFF8F8F8F),
+                          trackHeight: 2.0,
+                          thumbColor: Theme.of(context).primaryColor,
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 8.0),
+                          overlayColor: Colors.purple.withAlpha(32),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 14.0),
+                        ),
+                        child: RangeSlider(
+                          values: sliderVal5,
+                          // onChangeEnd: ,
+                          min: 0,
+                          max: 500,
+                          onChanged: (RangeValues value) {
+                            sliderVal5 = value;
+                            print(value.start);
+                            startRangeVal = value.start.toInt();
+                            endRangeVal = value.end.toInt();
+
+                            setState(() {});
+                          },
+                        ),
+                      ),
                     ),
                     Padding(
-                        padding: EdgeInsets.only(),
-                        child: Container(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Wrap(children: [
-                            Row(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      clinicSelected = true;
-                                      phonecallSelected = false;
-                                      videocallSelected = false;
-                                    });
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Card(
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50.0),
-                                        ),
-                                        child: CircleAvatar(
-                                          backgroundColor: clinicSelected
-                                              ? Theme.of(context).primaryColor
-                                              : Colors.white,
-                                          child: Icon(
-                                            FontAwesomeIcons.clinicMedical,
-                                            color: clinicSelected
-                                                ? Colors.white
-                                                : Color(0xFF8F8F8F),
-                                          ),
-                                          radius: 25,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(top: 0),
-                                        child: Text(
-                                          'Clinic Visit',
-                                          style: Theme.of(context)
-                                              .primaryTextTheme
-                                              .subtitle2,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      clinicSelected = false;
-                                      phonecallSelected = true;
-                                      videocallSelected = false;
-                                    });
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Card(
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50.0),
-                                        ),
-                                        child: CircleAvatar(
-                                          backgroundColor: phonecallSelected
-                                              ? Theme.of(context).primaryColor
-                                              : Colors.white,
-                                          child: Icon(
-                                            FontAwesomeIcons.phoneAlt,
-                                            color: phonecallSelected
-                                                ? Colors.white
-                                                : Color(0xFF8F8F8F),
-                                          ),
-                                          radius: 25,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(top: 0),
-                                        child: Text(
-                                          'Phone Call',
-                                          style: Theme.of(context)
-                                              .primaryTextTheme
-                                              .subtitle2,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    setState(() {
-                                      clinicSelected = false;
-                                      phonecallSelected = false;
-                                      videocallSelected = true;
-                                    });
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Card(
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(50.0),
-                                        ),
-                                        child: CircleAvatar(
-                                          backgroundColor: videocallSelected
-                                              ? Theme.of(context).primaryColor
-                                              : Colors.white,
-                                          child: Icon(
-                                            FontAwesomeIcons.video,
-                                            color: videocallSelected
-                                                ? Colors.white
-                                                : Color(0xFF8F8F8F),
-                                          ),
-                                          radius: 25,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(top: 0),
-                                        child: Text(
-                                          'Video Call',
-                                          style: Theme.of(context)
-                                              .primaryTextTheme
-                                              .subtitle2,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                      padding: const EdgeInsets.only(
+                        bottom: 0,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text(
+                              'Rs.0',
+                              style:
+                                  Theme.of(context).primaryTextTheme.subtitle2,
                             ),
-                          ]),
-                        ))
-                  ]))
-            ]))));
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Text('Rs.1000',
+                                style: Theme.of(context)
+                                    .primaryTextTheme
+                                    .subtitle2),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Rating',
+                        style: Theme.of(context).primaryTextTheme.bodyText1,
+                      ),
+                      Row(
+                        children: [
+                          RatingBar.builder(
+                            initialRating: ratingVal,
+                            minRating: 0,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemSize: 20,
+                            itemPadding: EdgeInsets.symmetric(horizontal: 0),
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            ignoreGestures: false,
+                            updateOnDrag: true,
+                            onRatingUpdate: (rating) {
+                              ratingVal = rating;
+                              setState(() {});
+                            },
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7),
+                            child: Text(
+                              '$ratingVal+',
+                              style:
+                                  Theme.of(context).primaryTextTheme.subtitle2,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Type of Appointment',
+                            style: Theme.of(context).primaryTextTheme.bodyText1,
+                          ),
+                        ],
+                      ),
+                      Padding(
+                          padding: EdgeInsets.only(),
+                          child: Container(
+                              padding: const EdgeInsets.only(left: 5),
+                              child: Wrap(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Card(
+                                            elevation: 3,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        50.0)),
+                                            child: CircleAvatar(
+                                              backgroundColor: clinicSelected
+                                                  ? Theme.of(context)
+                                                      .primaryColor
+                                                  : Colors.white,
+                                              child: Icon(
+                                                  FontAwesomeIcons
+                                                      .clinicMedical,
+                                                  color: clinicSelected
+                                                      ? Colors.white
+                                                      : Color(0xFF8F8F8F)),
+                                              radius: 25,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(top: 0),
+                                            child: Text(
+                                              'Clinic Visit',
+                                              style: Theme.of(context)
+                                                  .primaryTextTheme
+                                                  .subtitle2,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Column(
+                                        children: [
+                                          Card(
+                                            elevation: 3,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        50.0)),
+                                            child: CircleAvatar(
+                                              backgroundColor: phonecallSelected
+                                                  ? Theme.of(context)
+                                                      .primaryColor
+                                                  : Colors.white,
+                                              child: Icon(
+                                                  FontAwesomeIcons.phoneAlt,
+                                                  color: phonecallSelected
+                                                      ? Colors.white
+                                                      : Color(0xFF8F8F8F)),
+                                              radius: 25,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(top: 0),
+                                            child: Text(
+                                              'Phone Call',
+                                              style: Theme.of(context)
+                                                  .primaryTextTheme
+                                                  .subtitle2,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Column(
+                                        children: [
+                                          Card(
+                                            elevation: 3,
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        50.0)),
+                                            child: CircleAvatar(
+                                              backgroundColor: videocallSelected
+                                                  ? Theme.of(context)
+                                                      .primaryColor
+                                                  : Colors.white,
+                                              child: Icon(
+                                                  FontAwesomeIcons.video,
+                                                  color: videocallSelected
+                                                      ? Colors.white
+                                                      : Color(0xFF8F8F8F)),
+                                              radius: 25,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(top: 0),
+                                            child: Text(
+                                              'Video Call',
+                                              style: Theme.of(context)
+                                                  .primaryTextTheme
+                                                  .subtitle2,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ))),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ));
   }
 
   @override

@@ -1,7 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:pet_user_app/Utils/Api.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
 import 'package:pet_user_app/screens/logInScreen1.dart';
 import 'package:pet_user_app/widgets/bottomNavigationBarWidget.dart';
+import 'package:http/http.dart' as http;
+var response, name , email, phone ,password;
+
+
 
 class SIgnUpScreen extends BaseRoute {
   // SIgnUpScreen() : super();
@@ -12,6 +19,12 @@ class SIgnUpScreen extends BaseRoute {
 
 class _SIgnUpScreenState extends BaseRouteState {
   _SIgnUpScreenState() : super();
+
+final namecontroller = TextEditingController();
+final emailcontroller = TextEditingController();
+final passwordcontroller = TextEditingController();
+final phonecontroller = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,37 +69,53 @@ class _SIgnUpScreenState extends BaseRouteState {
               Padding(
                 padding: EdgeInsets.only(top: 50),
                 child: TextFormField(
+                  controller: namecontroller,
                   decoration: InputDecoration(
                     hintText: 'Full Name',
                     contentPadding: EdgeInsets.only(top: 5, left: 10),
                   ),
+                  onChanged: (value){
+                    name=value;
+                  },
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: TextFormField(
+                  controller: emailcontroller,
                   decoration: InputDecoration(
                     hintText: 'Email Address',
                     contentPadding: EdgeInsets.only(top: 5, left: 10),
                   ),
+                  onChanged: (value){
+                    email=value;
+                  },
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: TextFormField(
+                  controller: phonecontroller,
                   decoration: InputDecoration(
                     hintText: 'Mobile Number',
                     contentPadding: EdgeInsets.only(top: 5, left: 10),
                   ),
+                  onChanged: (value){
+                    phone=value;
+                  },
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 15),
                 child: TextFormField(
+                  controller: passwordcontroller,
                   decoration: InputDecoration(
                     hintText: 'Password',
                     contentPadding: EdgeInsets.only(top: 5, left: 10),
                   ),
+                  onChanged: (value){
+                    password=value;
+                  },
                 ),
               ),
               Padding(
@@ -114,10 +143,29 @@ class _SIgnUpScreenState extends BaseRouteState {
                 width: MediaQuery.of(context).size.width,
                 child: TextButton(
                     // style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColor)),
-                    onPressed: () {
+                    onPressed: () async {
                       // print('Hello');
+                      response=await http.post(
+                        Uri.parse(Api.urlAddUser),
+                        headers: <String, String>{
+                          'Content-Type':
+                          'application/json; charset=UTF-8',
+                        },
+                        body: json.encode({
+                          "name":name,
+                          "email":email,
+                          "phone":phone,
+                          "password":password
+
+                        }),
+
+                      );
+
+                      print(name);
+                      print(response.body);
+
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => BottomNavigationWidget(
+                          builder: (context) => LogInScreen1(
                                 a: widget.analytics,
                                 o: widget.observer,
                               )));

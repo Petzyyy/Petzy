@@ -2,13 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
-import 'package:pet_user_app/screens/aboutUsScreen.dart';
 import 'package:pet_user_app/screens/addRatingScreen.dart';
 import 'package:pet_user_app/screens/languageSelectionScreen.dart';
 
 import 'package:pet_user_app/screens/logInScreen1.dart';
 import 'package:pet_user_app/screens/myPostScreen.dart';
-import 'package:pet_user_app/screens/profileScreen.dart';
 import 'package:pet_user_app/screens/supportsUsScreen.dart';
 
 import 'package:pet_user_app/screens/userAccountScreen.dart';
@@ -93,7 +91,7 @@ class _SettingScreenState extends BaseRouteState {
                             )));
                   },
                   child: Container(
-                      color: Colors.transparent,
+                       color: Colors.transparent,
                       margin: EdgeInsets.only(bottom: 10, top: 35),
                       width: MediaQuery.of(context).size.width,
                       child: Row(
@@ -217,7 +215,7 @@ class _SettingScreenState extends BaseRouteState {
                             )));
                   },
                   child: Container(
-                      color: Colors.transparent,
+                    color: Colors.transparent,
                       margin: EdgeInsets.only(top: 10, bottom: 10),
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,
@@ -262,7 +260,7 @@ class _SettingScreenState extends BaseRouteState {
                             )));
                   },
                   child: Container(
-                      color: Colors.transparent,
+                    color: Colors.transparent,
                       margin: EdgeInsets.only(top: 10, bottom: 10),
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,
@@ -298,51 +296,42 @@ class _SettingScreenState extends BaseRouteState {
                         ],
                       )),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => AboutUsScreen(
-                              a: widget.analytics,
-                              o: widget.observer,
-                            )));
-                  },
-                  child: Container(
-                      color: Colors.transparent,
-                      margin: EdgeInsets.only(top: 10, bottom: 10),
-                      // color: Colors.red,
-                      width: MediaQuery.of(context).size.width,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(),
-                                child: Icon(
-                                  FontAwesomeIcons.infoCircle,
-                                  size: 18,
-                                  color: Theme.of(context).primaryColor,
-                                ),
+                Container(
+                  color: Colors.transparent,
+                    margin: EdgeInsets.only(top: 10, bottom: 10),
+                    // color: Colors.red,
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(),
+                              child: Icon(
+                                FontAwesomeIcons.infoCircle,
+                                size: 18,
+                                color: Theme.of(context).primaryColor,
                               ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 15),
-                                child: Text(
-                                  'About us',
-                                  style: Theme.of(context)
-                                      .primaryTextTheme
-                                      .bodyText1,
-                                ),
-                              )
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(),
-                            child: Icon(Icons.arrow_forward_ios_outlined,
-                                size: 18, color: Color(0xFF8F8F8F)),
-                          )
-                        ],
-                      )),
-                ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 15),
+                              child: Text(
+                                'About us',
+                                style: Theme.of(context)
+                                    .primaryTextTheme
+                                    .bodyText1,
+                              ),
+                            )
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(),
+                          child: Icon(Icons.arrow_forward_ios_outlined,
+                              size: 18, color: Color(0xFF8F8F8F)),
+                        )
+                      ],
+                    )),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
@@ -352,7 +341,7 @@ class _SettingScreenState extends BaseRouteState {
                             )));
                   },
                   child: Container(
-                      color: Colors.transparent,
+                    color: Colors.transparent,
                       margin: EdgeInsets.only(top: 10, bottom: 10),
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,
@@ -397,7 +386,7 @@ class _SettingScreenState extends BaseRouteState {
                             )));
                   },
                   child: Container(
-                      color: Colors.transparent,
+                    color: Colors.transparent,
                       margin: EdgeInsets.only(top: 10, bottom: 10),
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,
@@ -438,7 +427,7 @@ class _SettingScreenState extends BaseRouteState {
                     logOutDialog();
                   },
                   child: Container(
-                      color: Colors.transparent,
+                    color: Colors.transparent,
                       margin: EdgeInsets.only(top: 35, bottom: 10),
                       // color: Colors.red,
                       width: MediaQuery.of(context).size.width,

@@ -112,7 +112,7 @@ class _UserAccountScreenState extends BaseRouteState {
                     decoration: InputDecoration(
                       hintText: 'Tanki K.',
                       // prefixIcon: Icon(Icons.mail),
-                      
+
                       contentPadding: EdgeInsets.only(top: 5, left: 10),
                     ),
                   ),

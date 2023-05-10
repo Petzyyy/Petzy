@@ -67,7 +67,7 @@ class _LanguageSelectionScreenState extends BaseRouteState {
                                       selectedvalue = val;
                                     });
                                   }),
-                              Text('Arabic',
+                              Text('Hindi',
                                   style: Theme.of(context)
                                       .primaryTextTheme
                                       .bodyText1)

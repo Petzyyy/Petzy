@@ -24,22 +24,28 @@ class _AddAddressDialogState extends BaseRouteState {
           children: [
             Text(
               'Add New Address',
-              style: Theme.of(context).primaryTextTheme.displayLarge,
+              style: Theme.of(context).primaryTextTheme.headline1,
             ),
+        
+         
+           
+          
+        
             Padding(
-              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-              child: TextFormField(
-                maxLines: 3,
-                // keyboardType: TextInputType.numberWithOptions(
-                //     signed: true,),
-                controller: _cNumber,
-                decoration: InputDecoration(
-                  hintText: 'Enter New Address',
-                  // prefixIcon: Icon(Icons.mail),
-                  contentPadding: EdgeInsets.only(top: 5, left: 10),
-                ),
-              ),
-            ),
+                    padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+                    child: TextFormField(
+                      maxLines: 3,
+                      // keyboardType: TextInputType.numberWithOptions(
+                      //     signed: true,),
+                       controller: _cNumber,
+                      decoration: InputDecoration(
+                        hintText: 'Enter New Address',
+                        // prefixIcon: Icon(Icons.mail),
+                        contentPadding: EdgeInsets.only(top: 5, left: 10),
+                      ),
+                    ),
+                  ),
+              
             Padding(
               padding: EdgeInsets.only(top: 70),
               child: SizedBox(
@@ -56,11 +62,16 @@ class _AddAddressDialogState extends BaseRouteState {
                       setState(() {
                         val = '9913125780';
                       });
-                    } else if (_selectedNumber == 2) {
-                      setState(() {
+                    }
+                    else if(_selectedNumber == 2)
+                    {
+                         setState(() {
                         val = '9726458531';
                       });
-                    } else {
+
+                    }
+                    else
+                    {
                       setState(() {
                         val = _cNumber.text;
                       });

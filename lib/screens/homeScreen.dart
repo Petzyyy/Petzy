@@ -1,8 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_user_app/models/api_utils.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
-import 'package:pet_user_app/models/entites/products.dart';
 import 'package:pet_user_app/screens/CartScreen.dart';
 import 'package:pet_user_app/screens/dogWalkingScreen.dart';
 import 'package:pet_user_app/screens/petBoardingScreen.dart';
@@ -675,10 +673,10 @@ class _HomeScreenState extends BaseRouteState {
     super.dispose();
   }
 
+  bool isloading = true;
+
   @override
   void initState() {
     super.initState();
   }
-
-  bool isloading = true;
 }

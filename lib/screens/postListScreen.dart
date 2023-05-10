@@ -20,6 +20,7 @@ class _PostListScreenState extends BaseRouteState {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
+        
           title: Text(
             'Post',
             style: Theme.of(context).primaryTextTheme.headline1,

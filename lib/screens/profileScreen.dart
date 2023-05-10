@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pet_user_app/models/api_utils.dart';
 import 'package:pet_user_app/models/businessLayer/baseRoute.dart';
-import 'package:pet_user_app/models/entites/pets.dart';
 import 'package:pet_user_app/screens/ReminderScreen.dart';
 import 'package:pet_user_app/screens/myWalletScreen.dart';
 import 'package:pet_user_app/screens/notificationScreen.dart';
 import 'package:pet_user_app/screens/petProfileScreen.dart';
 import 'package:pet_user_app/screens/settingScreen.dart';
 import 'package:pet_user_app/screens/wishListScreen.dart';
-import 'package:pet_user_app/screens/addPetScreen.dart';
 
 class ProfileScreen extends BaseRoute {
   // ProfileScreen() : super();
@@ -20,15 +17,6 @@ class ProfileScreen extends BaseRoute {
 
 class _ProfileScreenState extends BaseRouteState {
   _ProfileScreenState() : super();
-  List<Pets> pets = [];
-  ApiUtils _apiUtils = ApiUtils();
-  @override
-  void initState() {
-    super.initState();
-    _apiUtils.getAllPets().then((value) => setState(() => pets = value));
-    print(pets);
-    ;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +77,7 @@ class _ProfileScreenState extends BaseRouteState {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'majdiii',
+                              'Tanvi K.',
                               style:
                                   Theme.of(context).primaryTextTheme.headline5,
                             ),
@@ -97,7 +85,7 @@ class _ProfileScreenState extends BaseRouteState {
                               padding:
                                   const EdgeInsets.only(top: 5, bottom: 10),
                               child: Text(
-                                'tunis',
+                                'khar West,Mumbai',
                                 style: Theme.of(context)
                                     .primaryTextTheme
                                     .subtitle2,
@@ -312,56 +300,175 @@ class _ProfileScreenState extends BaseRouteState {
                         'My Pets',
                         style: Theme.of(context).primaryTextTheme.bodyText1,
                       ),
-                      GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => AddPetScreen(
-                                      a: widget.analytics,
-                                      o: widget.observer,
-                                    )));
-                          },
-                          child: Text(
-                            '+ Add Pet',
-                            style: Theme.of(context).textTheme.subtitle2,
-                          ))
+                      Text(
+                        '+ Add Pet',
+                        style: Theme.of(context).textTheme.subtitle2,
+                      )
                     ],
                   ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: 132,
-                  child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: pets.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => PetProfileScreen(
-                                      a: widget.analytics,
-                                      o: widget.observer,
-                                    )));
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 10, right: 10),
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/home3.png'),
-                                  radius: 45,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15),
-                                  child: Text(pets[index].name),
-                                )
-                              ],
-                            ),
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: AssetImage('assets/home3.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cookie'),
+                              )
+                            ],
                           ),
-                        );
-                      }),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding:
+                              const EdgeInsets.only(top: 10, left: 5, right: 5),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage:
+                                    AssetImage('assets/catimage.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cuddles'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: AssetImage('assets/home3.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cookie'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage:
+                                    AssetImage('assets/catimage.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cuddles'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: AssetImage('assets/home3.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cookie'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PetProfileScreen(
+                                    a: widget.analytics,
+                                    o: widget.observer,
+                                  )));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage:
+                                    AssetImage('assets/catimage.png'),
+                                radius: 45,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Text('Cuddles'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
@@ -375,4 +482,9 @@ class _ProfileScreenState extends BaseRouteState {
   }
 
   bool isloading = true;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 }

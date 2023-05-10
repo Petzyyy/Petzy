@@ -24,7 +24,7 @@ class _ChangeEmailDialogState extends BaseRouteState {
           children: [
             Text(
               'Select Email',
-              style: Theme.of(context).primaryTextTheme.displayLarge,
+              style: Theme.of(context).primaryTextTheme.headline1,
             ),
             Row(
               children: [

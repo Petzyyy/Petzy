@@ -16,15 +16,7 @@ class _SplashScreenState extends BaseRouteState {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              stops: [0.75, 1],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Theme.of(context).primaryColor,
-                Theme.of(context).primaryColorLight
-              ])),
+      decoration: BoxDecoration(gradient: LinearGradient(stops: [0.75, 1], begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Theme.of(context).primaryColor, Theme.of(context).primaryColorLight])),
       child: Center(
           child: Container(
         width: MediaQuery.of(context).size.width,
@@ -38,7 +30,7 @@ class _SplashScreenState extends BaseRouteState {
               child: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 65,
-                backgroundImage: AssetImage('assets/logo-no-background.png'),
+                backgroundImage: AssetImage('assets/splashLogo.png'),
               ),
             ),
             Container(

@@ -997,13 +997,13 @@ class _DogWalkingReviewScreenState extends BaseRouteState {
 
   void _showAlertDialog(BuildContext context) {
     // Create button
- /*  Widget okButton = FlatButton(
+  /*  Widget okButton = FlatButton(
       child: Center(child: Text("OK")),
       onPressed: () {
         Navigator.of(context).pop();
       },
-    );*/
-
+    );
+*/
     // Create AlertDialog
     AlertDialog alert = AlertDialog(
       title: Column(
@@ -1040,7 +1040,7 @@ class _DogWalkingReviewScreenState extends BaseRouteState {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15.0))),
               content: Stack(
-             //   overflow: Overflow.visible,
+         //       overflow: Overflow.visible,
                 children: <Widget>[
                   Container(
                     width: MediaQuery.of(context).size.width,
